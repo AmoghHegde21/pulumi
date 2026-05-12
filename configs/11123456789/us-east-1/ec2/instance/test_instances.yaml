@@ -1,0 +1,31 @@
+common_tags: &common_tags
+  Environment: stage
+  Cost_centre: engineering
+  Team: sre
+
+instances:
+  - name: pulumi-test-instance
+    ami: ami-0a59ec92177ec3fad
+    instance_type: t3.nano
+    key_name: amogh_test
+    tags: *common_tags
+    security_group:
+      security_groups:
+        - name: pulumi-test-sg
+          description: Security group for Pulumi EC2 test instance
+          region: us-east-1
+          tags: *common_tags
+          ingress:
+            - description: Allow SSH
+              from_port: 22
+              to_port: 22
+              protocol: tcp
+              cidr_blocks:
+                - 0.0.0.0/0
+          egress:
+            - description: Allow all outbound traffic
+              from_port: 0
+              to_port: 0
+              protocol: "-1"
+              cidr_blocks:
+                - 0.0.0.0/0
