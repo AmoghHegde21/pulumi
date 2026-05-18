@@ -1,4 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 *.pyc
+
+# Virtual environments
 .venv/
+venv/
+env/
+
+# IDE
 .idea/
-README.md
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Pulumi
+Pulumi.*.yaml
+!Pulumi.yaml
+
+Readme.md

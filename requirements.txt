@@ -1,7 +1,6 @@
 pulumi>=3.0.0,<4.0.0
 pulumi-aws>=7.0.0,<8.0.0
 
-
 annotated-types==0.7.0
 Arpeggio==2.0.3
 ast_serialize==0.3.0
@@ -43,3 +42,11 @@ typing_extensions==4.15.0
 urllib3==2.7.0
 wrapt==2.1.2
 zipp==3.23.1
+
+pytest==9.0.3
+pytest-mock==3.15.1
+pytest-cov==6.0.0
+iniconfig==2.3.0
+pluggy==1.6.0
+pygments==2.20.0
+coverage==7.6.10
